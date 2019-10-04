@@ -20,3 +20,14 @@ This repo is my practice for the course "git frome zero to hero" of codersx.
 - code review
 - resolve conflict with git rebase
 - resolve conflict with merge
+
+## Work with a team
+
+- git checkout -b <branch_name>
+- git push origin <branch_name>
+- create a pull request on Github
+- review code
+  -- review code online (github)
+  -- fetch branch into local machine to test offline
+  -- approve the pull request
+- merge to master

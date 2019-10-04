@@ -31,3 +31,24 @@ This repo is my practice for the course "git frome zero to hero" of codersx.
   -- fetch branch into local machine to test offline
   -- approve the pull request
 - merge to master
+
+## Resolve conflicts
+
+When will conflicts happen?
+
+- Changing the same file + same line
+- A deleted file X, B modified file X
+
+How to resolve?
+
+### Method 1:
+
+- Using `git rebase`
+- Resolve conflict
+- Push again with -f
+
+### Method 2:
+
+- Merge updated master to feature branch
+- Resolve conflict
+- Commit and push

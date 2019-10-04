@@ -1,4 +1,5 @@
 var chalk = require('chalk');
+var Horse = require('./horse');
 
 function Dog(name) {
   this.name = name;
@@ -10,16 +11,21 @@ function Cat(name) {
   this.stomach = [];
 }
 
-Dog.prototype.eat = function(cat) {
-  this.stomach.push(cat);
+Dog.prototype.eat = function(animal) {
+  if (animal instanceof Horse) {
+    this.stomach.push(animal);
+    return;
+  } else {
+    throw new Error('oops, something went wrong!');
+  }
 };
 
 Dog.prototype.sayHi = function() {
   console.log('Hi, I am a dog, my name is ' + chalk.red(this.name));
 };
 
-Cat.prototype.eat = function(dog) {
-  this.stomach.push(dog);
+Cat.prototype.eat = function(animal) {
+  this.stomach.push(animal);
 };
 
 Cat.prototype.sayHi = function() {
